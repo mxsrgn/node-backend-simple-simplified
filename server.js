@@ -17,7 +17,8 @@ const server = http.createServer((req, res) => {
   const page = url.parse(req.url).pathname;
   const params = querystring.parse(url.parse(req.url).query);
   console.log(page);
-
+  
+// added switch case to improve readbility
   switch (page){
     case '/': 
       readWrite('index.html', 'text/html')
